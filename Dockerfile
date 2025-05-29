@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM alpine:3.21
 
-RUN sed -i 's!dl-cdn.alpinelinux.org!alpine.ccns.ncku.edu.tw!; s!v3\.13!edge!' /etc/apk/repositories \
+RUN sed -i 's!dl-cdn.alpinelinux.org!mirror.twds.com.tw!' /etc/apk/repositories \
     && apk upgrade \
     && apk --update add --no-cache tinyproxy \
     && rm -rf /var/cache/apk/*
