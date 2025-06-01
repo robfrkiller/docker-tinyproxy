@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3.22
 
 RUN sed -i 's!dl-cdn.alpinelinux.org!mirror.twds.com.tw!' /etc/apk/repositories \
     && apk upgrade \
